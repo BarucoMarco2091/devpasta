@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap");
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/background.webp");
+  background-repeat: no-repeat;
+  height: 50%;
+}
+header nav {
+  display: flex;
+  max-width: 1240px;
+  margin: auto;
+  justify-content: space-between;
+  padding: 5dvh 5dvh;
+}
+header nav .nav-icons {
+  display: flex;
+}
+header nav .nav-icons i {
+  margin-right: 3dvh;
+  transition: color 0.9s;
+}
+header nav .nav-icons i:hover {
+  color: rgb(209, 77, 77);
+}
+header nav .nav-logo span {
+  font-size: 1.5rem;
+}
+header nav button {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 1dvh;
+  height: 5dvh;
+  width: 25dvh;
+  transition: border 0.9s;
+}
+header nav button:hover {
+  border: 2px solid rgb(209, 77, 77);
+}
+header h1 {
+  text-align: center;
+}/*# sourceMappingURL=header.component.css.map */

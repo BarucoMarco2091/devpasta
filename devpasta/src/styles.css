@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -19,4 +21,49 @@ body {
 
 h1, h2 {
   font-family: "Roboto", serif;
+  font-size: 3rem;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+p {
+  font-family: "Poppins", serif;
+  font-size: 1rem;
+  color: rgba(15, 15, 15, 0.87);
+}
+
+button {
+  font-family: "Poppins", serif;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  font-family: "Poppins", serif;
+  font-size: 1rem;
+  color: rgb(104, 211, 104);
+}
+
+i {
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+svg {
+  width: 100%;
+}
+
+@media (width <= 768px) {
+  h1, h2 {
+    font-size: 1.5rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -17,21 +17,19 @@ body {
     position: relative;
     outline: none;
     overflow-x: hidden;
+    background-color: $red;
 }
 
 h1, h2 {
     font-family: 'Roboto', serif;
     font-size: 3rem;
-}
-
-h1 {
     color: $white;
 }
 
 p {
     font-family: 'Poppins', serif;
     font-size: 1rem;
-    color: $black;
+    color: white;
 }
 
 button {

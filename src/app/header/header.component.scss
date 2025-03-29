@@ -1,0 +1,61 @@
+@import '../../../src/variables.scss';
+@import '../header/responsivity.scss';
+
+@keyframes scale {
+    from {
+        transform: translateY(0) scale(1);
+    }
+
+    to {
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+header {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('/background.webp');
+    background-repeat: no-repeat;
+    height: 60%;
+    
+    nav {
+        display: flex;
+        max-width: 1240px;
+        margin: auto;
+        justify-content: space-between;
+        padding: 5dvh 5dvh;
+
+        .nav-icons {
+            display: flex;
+
+            i {
+                margin-right: 3dvh;
+                transition: color .9s;
+            }
+
+            i:hover {
+                color: $green;
+                animation: scale 1s infinite alternate;
+            }
+        }
+
+        .nav-logo span {
+            font-size: 1.5rem;
+        }
+
+        button  {
+            background-color: transparent;
+            border: 1px solid $white;
+            border-radius: 1dvh;
+            height: 5dvh;
+            width: 25dvh;
+            transition: border .9s;
+        }
+
+        button:hover {
+            border: 2px solid $green;
+        }
+    }
+
+    h1 {
+        text-align: center;
+    }
+}

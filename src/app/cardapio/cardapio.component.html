@@ -1,0 +1,30 @@
+<main>
+    <section class="menu">
+        <h2>Conheça nosso cardápio</h2>
+        <div class="grid">
+            <div *ngFor="let item of menuItems" class="card">
+                <div class="card-img">
+                    <img [src]="item.image" [alt]="item.name" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <span class="card-name" [attr.data-name]>{{ item.name }}</span>
+                    <p class="card-description">{{ item.description }}</p>
+                    <div class="card-info">
+                        <p class="card-price" [attr.data-price]>R$ {{ item.price.toFixed(2) }}</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap");
+main {
+  max-width: 1240px;
+  margin: auto;
+}
+main .menu {
+  display: flex;
+  flex-direction: column;
+}
+main .menu h2 {
+  text-align: center;
+  margin: 5dvh 5dvh;
+}
+main .menu .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3dvh;
+  padding: 1dvh 1dvh;
+}
+main .menu .grid .card {
+  display: flex;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  border-radius: 2dvh;
+  overflow: hidden;
+}
+main .menu .grid .card div {
+  flex: 1;
+}
+main .menu .grid .card .card-img img {
+  width: 100%;
+  height: 45dvh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.9s;
+  filter: brightness(60%);
+}
+main .menu .grid .card .card-img img:hover {
+  transform: scale(1.1);
+}
+main .menu .grid .card .card-body {
+  margin-left: 3dvh;
+  text-align: center;
+}
+main .menu .grid .card .card-body .card-name {
+  color: #ffffff;
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 3dvh;
+}
+main .menu .grid .card .card-body .card-description {
+  font-weight: 500;
+  margin-bottom: 2dvh;
+  margin-top: 3dvh;
+  line-height: 1.5rem;
+}
+main .menu .grid .card .card-body .card-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 3dvh;
+  padding-top: 1dvh;
+}
+main .menu .grid .card .card-body .card-info .card-price {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+main .menu .grid .card .card-body .card-info .add-to-cart-btn {
+  background-color: rgb(104, 211, 104);
+  margin-right: 3dvh;
+  border: none;
+  border-radius: 2dvh;
+  width: 8dvh;
+  height: 8dvh;
+}
+main .menu .grid .card .card-body .card-info .add-to-cart-btn:hover {
+  background-color: rgb(40, 248, 40);
+}
+main .menu .grid .card .card-body .dish-rate {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1dvh;
+}
+main .menu .grid .card .card-body .dish-rate i {
+  color: rgba(243, 243, 64, 0.801);
+}
+main .menu .grid .card .card-body .dish-rate span {
+  font-family: "Poppins", serif;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-left: 1dvh;
+}
+main .menu .menu-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 5dvh;
+}
+main .menu .menu-button .menu-btn {
+  background-color: rgb(104, 211, 104);
+  width: 35dvh;
+  height: 5dvh;
+  border-radius: 2dvh;
+  border: none;
+  transition: background-color 0.9s;
+  animation: pulse 1s infinite alternate;
+}
+main .menu .menu-button .menu-btn:hover {
+  background-color: rgb(40, 248, 40);
+}/*# sourceMappingURL=cardapio.component.css.map */

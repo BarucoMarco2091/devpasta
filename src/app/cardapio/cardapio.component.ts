@@ -36,6 +36,61 @@ export class CardapioComponent {
     { name: 'Ravioli', description: 'Consiste em duas finas camadas de massa fresca rechreados com frango, cozidos rapidamente em água fervente e servidos com molho de tomate caseiro. Acompanha queijo ralado, salada verde e arroz branco.', price: 95.00, image: '/ravioli.webp' },
     { name: 'Risoto de Camarão', description: 'Arroz arbóreo cozido lentamente em caldo de camarão, com manteiga, cebola, alho e vinho branco, finalizado com camarões suculentos e um toque de limão siciliano. Acompanha legumes grelhados e salada verde.', price: 165.00, image: '/risotocamarao.webp' },
     { name: 'Talharim com Camarão', description: 'Talharim fresco al dente, alho, manteiga, limão siciliano, um toque de pimenta dedo-de-moça e ervas frescas. Acompanha salada verde refrescante e pão italiano.', price: 170.00, image: '/talharimcamarao.webp' },
-  ]
+  ];
 
+ 
+  cart: CardapioItem[] = [];
+  isModalOpen = false;
+  address = '';
+  showAddressWarning = false;
+
+  get total(): number {
+    return this.cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  }
+
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
+
+  addToCart(name: string, price: number) {
+    const existingItem = this.cart.find(item => item.name === name);
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      this.cart.push({ name, price, quantity: 1 });
+    }
+  }
+
+  removeItemCart(name: string) {
+    const index = this.cart.findIndex(item => item.name === name);
+    if (index !== -1) {
+      if (this.cart[index].quantity > 1) {
+        this.cart[index].quantity -= 1;
+      } else {
+        this.cart.splice(index, 1);
+      }
+    }
+  }
+
+  checkout() {
+    if (this.cart.length === 0) return;
+
+    if (!this.address.trim()) {
+      this.showAddressWarning = true;
+      return;
+    }
+
+    const cartItems = this.cart.map(item => `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price}`).join(' | ');
+    const phone = '5511996221043';
+    const message = encodeURIComponent(cartItems + ` Endereço: ${this.address}`);
+    window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+
+    this.cart = [];
+    this.address = '';
+    this.showAddressWarning = false;
+  }
 }

@@ -1,0 +1,18 @@
+{
+    "produtos": [
+        {
+            "id": 1,
+            "produto": "Polenta",
+            "descricao": "Nossa polenta é preparada com milho de qualidade, cozida lentamente até atingir a textura perfeita: cremosa por dentro e levemente firme.",
+            "foto": "/polenta.webp",
+            "preco": 100
+        },
+        {
+            "id": 2,
+            "produto": "Bife a Milanesa",
+            "descricao": "Delicioso bife de contra-filé empanado, dourado na perfeição e servido com uma crosta crocante. Acompanha Arroz branco soltinho, Purê de batatas cremoso, Salada de folhas frescas",
+            "foto": "/bifeamilanesa.webp",
+            "preco": 90
+        }
+    ]
+}

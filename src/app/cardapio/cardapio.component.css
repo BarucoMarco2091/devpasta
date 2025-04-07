@@ -136,7 +136,7 @@ main .menu .menu-button .menu-btn:hover {
   border: none;
   border-radius: 2dvh;
   background-color: #ffffff;
-  color: rgba(15, 15, 15, 0.87);
+  color: rgb(252, 55, 55);
   transition: background-color 1s;
 }
 .cart-modal-button #cart-btn:hover {

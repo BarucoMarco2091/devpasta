@@ -35,6 +35,15 @@ header {
                 color: $green;
                 animation: scale 1s infinite alternate;
             }
+
+            a {
+                color: $white;
+                transition: color .9s;
+            }
+
+            a:hover {
+                color: $green;
+            }
         }
 
         .nav-logo span {

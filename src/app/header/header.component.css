@@ -33,6 +33,13 @@ header nav .nav-icons i:hover {
   color: rgb(104, 211, 104);
   animation: scale 1s infinite alternate;
 }
+header nav .nav-icons a {
+  color: #ffffff;
+  transition: color 0.9s;
+}
+header nav .nav-icons a:hover {
+  color: rgb(104, 211, 104);
+}
 header nav .nav-logo span {
   font-size: 1.5rem;
 }
